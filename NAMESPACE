@@ -2,3 +2,4 @@
 
 export(eq_map)
 importFrom(dplyr,rename)
+importFrom(leaflet,leaflet)

@@ -17,10 +17,14 @@
 #' @return list or map
 #'
 #' @importFrom dplyr rename
+#' @importFrom leaflet leaflet
 #'
 #' @export
 eq_map <- function(data, annot_col) {
   annot_col = as.character(annot_col)
   df = dplyr::rename(data,
                      "annot_col" = paste(annot_col))
+  leaflet::leaflet()
+
+  df
 }

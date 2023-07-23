@@ -7,6 +7,7 @@ always_allow_html: true
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
+  echo = TRUE,
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
@@ -40,9 +41,6 @@ This is a basic example which shows you how to an interactive map using `eq_map(
 
 ```{r example}
 library(noaar)
-library(leaflet)
-library(raster)
-library(terra)
 
 my_df = data.frame(
   Year = 2001:2005, Mo = 1:5, Dy = 11:15,
