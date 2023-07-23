@@ -26,3 +26,5 @@ Imports:
     dplyr,
     leaflet,
     magrittr
+URL: https://github.com/hugostar7/noaar
+BugReports: https://github.com/hugostar7/noaar/issues
