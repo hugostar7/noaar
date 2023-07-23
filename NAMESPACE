@@ -2,7 +2,3 @@
 
 export(eq_map)
 importFrom(dplyr,rename)
-importFrom(leaflet,addCircleMarkers)
-importFrom(leaflet,addTiles)
-importFrom(leaflet,leaflet)
-importFrom(magrittr,"%>%")
