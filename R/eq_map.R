@@ -17,8 +17,8 @@
 #' @return list or map
 #'
 #' @importFrom dplyr rename
-#' @importFrom leaflet leaflet addTiles addCircleMarkers
 #' @importFrom magrittr %>%
+#' @import leaflet
 #'
 #' @export
 eq_map <- function(data, annot_col) {
