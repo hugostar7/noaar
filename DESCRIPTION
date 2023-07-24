@@ -22,6 +22,7 @@ Suggests:
 Config/testthat/edition: 3
 Imports: 
     dplyr,
-    leaflet
+    leaflet,
+    magrittr
 URL: https://github.com/hugostar7/noaar
 BugReports: https://github.com/hugostar7/noaar/issues
