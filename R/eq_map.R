@@ -18,7 +18,7 @@
 #'
 #' @importFrom dplyr rename
 #' @importFrom magrittr %>%
-#' @importFrom leaflet leaflet addTiles addCircleMarkers
+#' @import leaflet
 #' @import raster
 #' @import terra
 #'
@@ -39,7 +39,5 @@ eq_map <- function(data, annot_col) {
       label = ~ annot_col,
       fillOpacity = .4
     )
-
-
   df
 }
