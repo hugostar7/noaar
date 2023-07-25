@@ -18,10 +18,13 @@
 #'
 #' @importFrom dplyr rename
 #' @importFrom magrittr %>%
-#' @import leaflet
+#' @importFrom leaflet leaflet addTiles addCircleMarkers
+#' @import raster
+#' @import terra
 #'
 #' @export
 eq_map <- function(data, annot_col) {
+  xm <- raster::raster(); xm <- terra::xmin(xm)
   annot_col = as.character(annot_col)
   df = dplyr::rename(data,
                      "annot_col" = paste(annot_col))
