@@ -17,27 +17,23 @@
 #' @return list or map
 #'
 #' @importFrom dplyr rename
-#' @importFrom magrittr %>%
-#' @import leaflet
-#' @import raster
-#' @import terra
 #'
 #' @export
 eq_map <- function(data, annot_col) {
-  xm <- raster::raster(); xm <- terra::xmin(xm)
+  #r <- raster::raster(); r <- terra::xmin(xm)
   annot_col = as.character(annot_col)
   df = dplyr::rename(data,
                      "annot_col" = paste(annot_col))
-  leaflet::leaflet() %>%
-    leaflet::addTiles() %>%
-    leaflet::addCircleMarkers(
-      data = df,
-      lng = ~ LONGITUDE,
-      lat = ~ LATITUDE,
-      radius = ~ Mag,
-      popup = ~ annot_col,
-      label = ~ annot_col,
-      fillOpacity = .4
-    )
+  #leaflet::leaflet() %>%
+    #leaflet::addTiles() %>%
+    #leaflet::addCircleMarkers(
+      #data = df,
+      #lng = ~ LONGITUDE,
+      #lat = ~ LATITUDE,
+      #radius = ~ Mag,
+      #popup = ~ annot_col,
+      #label = ~ annot_col,
+      #fillOpacity = .4
+    #)
   df
 }
