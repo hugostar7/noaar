@@ -17,10 +17,17 @@
 #' @return list or map
 #'
 #' @importFrom dplyr rename
+#' @importFrom raster raster
+#' @importFrom terra  xmin
+#'
+#' @examples
+#' r <- raster::raster();
+#' r <- terra::xmin(r)
+#'
 #'
 #' @export
 eq_map <- function(data, annot_col) {
-  #r <- raster::raster(); r <- terra::xmin(xm)
+  #r <- raster::raster(); r <- terra::xmin(r)
   annot_col = as.character(annot_col)
   df = dplyr::rename(data,
                      "annot_col" = paste(annot_col))
