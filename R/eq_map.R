@@ -26,7 +26,7 @@ eq_map <- function(data, annot_col) {
 
   annot_col = as.character(annot_col)
   df = dplyr::rename(data,
-                     "annot_col" = paste(annot_col))
+                     "annot_col" = annot_col)
   leaflet::leaflet() %>%
     leaflet::addTiles() %>%
     leaflet::addCircleMarkers(
