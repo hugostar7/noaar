@@ -26,9 +26,3 @@ and LATITUDE on that row. The radius of the circle is
 proportional to the Mag on that row. The annotation is
 displayed by clicking on the circle.
 }
-\examples{
-r <- raster::raster();
-r <- terra::xmin(r)
-
-
-}

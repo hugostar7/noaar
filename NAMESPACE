@@ -2,5 +2,7 @@
 
 export(eq_map)
 importFrom(dplyr,rename)
-importFrom(raster,raster)
-importFrom(terra,xmin)
+importFrom(leaflet,addCircleMarkers)
+importFrom(leaflet,addTiles)
+importFrom(leaflet,leaflet)
+importFrom(magrittr,"%>%")

@@ -22,7 +22,7 @@ Suggests:
 Config/testthat/edition: 3
 Imports: 
     dplyr (>= 1.1.2),
-    raster,
-    terra
+    leaflet,
+    magrittr
 URL: https://github.com/hugostar7/noaar
 BugReports: https://github.com/hugostar7/noaar/issues
