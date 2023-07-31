@@ -26,3 +26,17 @@ and LATITUDE on that row. The radius of the circle is
 proportional to the Mag on that row. The annotation is
 displayed by clicking on the circle.
 }
+\examples{
+my_data = data.frame(
+Mag = c(3,2,5,4,2), Deaths = c(0,1,3,2,0),
+DATE = as.Date(
+ paste(2001:2005, 1:5, 11:15, sep = "-")),
+LONGITUDE = 21:25,
+LATITUDE = 31:35,
+COUNTRY = c("AAAA", "BBBB", "CCCC", "DDDD", "EEEE"),
+LOCATION_NAME = c("Aaaa", "Bbbb", "Cccc", "Dddd", "Eeee"),
+check.names = FALSE
+)
+eq_map(my_data, annot_col = "DATE")
+
+}
