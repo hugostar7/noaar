@@ -54,5 +54,5 @@ my_data = data.frame(
  check.names = FALSE
 )
   
-  eq_map(my_data, annot_col = "DATE")
+  eq_map(my_data, annot_col = "LOCATION_NAME")
 ```
