@@ -5,8 +5,6 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.com/hugostar7/noaar.svg?branch=main)](https://travis-ci.com/hugostar7/noaar)
 [![R-CMD-check](https://github.com/hugostar7/noaar/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hugostar7/noaar/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -32,14 +30,12 @@ devtools::install_github("hugostar7/noaar")
 
 ## Example
 
-This is a basic example which shows you how to an interactive map using
-`eq_map()` :
+This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(noaar)
 
 my_data = data.frame(
-  
  Mag = c(3,2,5,4,2), Deaths = c(0,1,3,2,0),
  DATE = as.Date(
   paste(2001:2005, 1:5, 11:15, sep = "-")),
@@ -49,12 +45,11 @@ my_data = data.frame(
  LOCATION_NAME = c("Aaaa", "Bbbb", "Cccc", "Dddd", "Eeee"),
  check.names = FALSE
 )
-  
-  eq_map(my_data, annot_col = "LOCATION_NAME")
-#>   Mag Deaths       DATE LONGITUDE LATITUDE COUNTRY annot_col
-#> 1   3      0 2001-01-11        21       31    AAAA      Aaaa
-#> 2   2      1 2002-02-12        22       32    BBBB      Bbbb
-#> 3   5      3 2003-03-13        23       33    CCCC      Cccc
-#> 4   4      2 2004-04-14        24       34    DDDD      Dddd
-#> 5   2      0 2005-05-15        25       35    EEEE      Eeee
+eq_map(my_data, annot_col = "DATE")
+#>   Mag Deaths  annot_col LONGITUDE LATITUDE COUNTRY LOCATION_NAME
+#> 1   3      0 2001-01-11        21       31    AAAA          Aaaa
+#> 2   2      1 2002-02-12        22       32    BBBB          Bbbb
+#> 3   5      3 2003-03-13        23       33    CCCC          Cccc
+#> 4   4      2 2004-04-14        24       34    DDDD          Dddd
+#> 5   2      0 2005-05-15        25       35    EEEE          Eeee
 ```

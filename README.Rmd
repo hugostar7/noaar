@@ -7,7 +7,6 @@ always_allow_html: true
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  echo = TRUE,
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
@@ -18,7 +17,6 @@ knitr::opts_chunk$set(
 # noaar
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.com/hugostar7/noaar.svg?branch=main)](https://travis-ci.com/hugostar7/noaar)
 [![R-CMD-check](https://github.com/hugostar7/noaar/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hugostar7/noaar/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -37,13 +35,12 @@ devtools::install_github("hugostar7/noaar")
 
 ## Example
 
-This is a basic example which shows you how to an interactive map using `eq_map()` :
+This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 library(noaar)
 
 my_data = data.frame(
-  
  Mag = c(3,2,5,4,2), Deaths = c(0,1,3,2,0),
  DATE = as.Date(
   paste(2001:2005, 1:5, 11:15, sep = "-")),
@@ -53,6 +50,5 @@ my_data = data.frame(
  LOCATION_NAME = c("Aaaa", "Bbbb", "Cccc", "Dddd", "Eeee"),
  check.names = FALSE
 )
-  
-  eq_map(my_data, annot_col = "LOCATION_NAME")
+eq_map(my_data, annot_col = "DATE")
 ```
