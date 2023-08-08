@@ -49,5 +49,5 @@ my_data = data.frame(
  LOCATION_NAME = c("Aaaa", "Bbbb", "Cccc", "Dddd", "Eeee"),
  check.names = FALSE
 )
-eq_map(my_data, annot_col = "LOCATION_NAME")
+eq_map(my_data, annot_col = "DATE")
 ```
