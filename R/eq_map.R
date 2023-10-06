@@ -47,7 +47,7 @@ eq_map <- function(data, annot_col) {
       lat = ~ LATITUDE,
       radius = ~ Mag,
       popup = ~ annot_col,
-      label = ~ annot_col,
-      fillOpacity = .4
+      #label = ~ annot_col,
+      fillOpacity = .3
     )
 }
